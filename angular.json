@@ -12,19 +12,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/03-ui-componentes-estilos",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "public"
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "assets": ["src/public"],
+            "styles": ["src/styles.css"]
           },
           "configurations": {
             "production": {
@@ -33,16 +27,10 @@
                   "type": "initial",
                   "maximumWarning": "500kB",
                   "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/icc-ppw-u3-componentesEstilos/",
-              "deployUrl": "/icc-ppw-u3-componentesEstilos/"
+              "baseHref": "/icc-ppw-u3-componentesEstilos/"
             },
             "development": {
               "optimization": false,
@@ -50,7 +38,7 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
 
         "serve": {
@@ -64,35 +52,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
-        },
-
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "public"
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
-          }
-        },
-
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "/icc-ppw-u3-componentesEstilos/",
-            "deployUrl": "/icc-ppw-u3-componentesEstilos/"
-          }
         }
       }
     }

@@ -89,6 +89,13 @@
               "src/styles.css"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/icc-ppw-u3-componentesEstilos/",
+            "buildTarget": "03-ui-componentes-estilos:build:production"
+          }
         }
       }
     }
